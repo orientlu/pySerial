@@ -382,10 +382,10 @@ if __name__ == "__main__":
         finally :
             serial.flushInput()
             serial.flushOutput()
-            serial.close()
             readThread.quit = True
             readThread.join()
             readThread = None
+            serial.close()
             print "App quit"
 
     else:
